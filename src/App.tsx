@@ -4,7 +4,7 @@ import React from 'react'
 export const App = () => {
   return (
     <View>
-      <Text>Ajajjsjsjsjsjsjjdjjaaas pp</Text>
+      <Text>Ajajjsjsjsjsjsjjdjaasajaaas pp</Text>
     </View>
   )
 }
