@@ -18,7 +18,7 @@ export const VerticalCarousel = ({ heroes, title, loadNextPage }: Props) => {
     }, [heroes])
 
 
-    // Función para manejar el desplazamiento
+    
     const onScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
 
         if (isLoading.current) return;
@@ -29,7 +29,7 @@ export const VerticalCarousel = ({ heroes, title, loadNextPage }: Props) => {
 
         isLoading.current = true
 
-        //cargar siguentes heroes
+        
         loadNextPage && loadNextPage()
 
     };
@@ -67,7 +67,6 @@ export const VerticalCarousel = ({ heroes, title, loadNextPage }: Props) => {
 const styles = StyleSheet.create({
     flatList: {
         flex: 1,
-        paddingHorizontal: 10,  
     },
     flatListContainer: {
         justifyContent: 'center',  

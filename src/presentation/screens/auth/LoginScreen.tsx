@@ -84,23 +84,20 @@ export const LoginScreen = ({ navigation }: Props) => {
 
     return (
         <Layout style={styles.container}>
-            {/* Sección superior con bienvenida */}
             <View style={[styles.topContainer, { backgroundColor: theme['color-primary-500'], }]}>
                 <Image
                     source={require('../../../assets/marvel.png')}
                     // Estilo directo
                     style={{
                         marginTop: 60,
-                        width: 350,    // Ancho en píxeles
-                        height: 300     // Alto en píxeles
+                        width: 350,  
+                        height: 300  
                     }}
                 />
                 <Text category='h1' status='control' style={styles.welcomeText}>
                     ¡Bienvenido!
                 </Text>
             </View>
-
-            {/* Sección del formulario con animación */}
             <Animated.View
                 style={[
                     styles.bottomSheet,

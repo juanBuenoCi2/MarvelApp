@@ -16,7 +16,7 @@ export const useHeroes = () => {
     const initialLoad = async () => {
         try {
             const heroesData = await UseCases.HeroesCase(heroesDBFetcher, { offset: 0, limit });
-            const filteredHeroes = filterHeroes(heroesData);  // Filtramos los héroes
+            const filteredHeroes = filterHeroes(heroesData);  
             setHeroes(filteredHeroes);
         } catch (error) {
             console.error("Error loading Heroes:", error);
@@ -32,7 +32,7 @@ export const useHeroes = () => {
                 offset: newOffset, 
                 limit 
             });
-            const filteredHeroes = filterHeroes(newHeroes);  // Filtramos los nuevos héroes
+            const filteredHeroes = filterHeroes(newHeroes);  
             setHeroes(prev => [...prev, ...filteredHeroes]);
             setOffset(newOffset);
         } catch (error) {
@@ -40,7 +40,7 @@ export const useHeroes = () => {
         } 
     };
 
-    // Función para filtrar los héroes
+    
     const filterHeroes = (heroesData: Heroes[]) => {
         return heroesData.filter(hero => 
             !hero.thumbnail.includes('image_not_available')

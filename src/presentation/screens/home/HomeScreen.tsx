@@ -89,7 +89,6 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 16
   },
   loadingContainer: {
     flex: 1,

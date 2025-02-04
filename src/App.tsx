@@ -8,17 +8,17 @@ import { useColorScheme } from 'react-native';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { AuthProvider } from './presentation/context/AuthContext';
 
-// Paleta de colores Marvel
+
 const marvelColors = {
-  primaryRed: '#ED1D24',    // Rojo Marvel clásico
-  darkRed: '#9F1116',       // Rojo oscuro
-  marvelBlack: '#000000',   // Negro
-  marvelWhite: '#FFFFFF',   // Blanco
-  accentGold: '#FFD700',    // Oro para acentos
-  secondaryGrey: '#2C2C2C'  // Gris oscuro
+  primaryRed: '#ED1D24',    
+  darkRed: '#9F1116',       
+  marvelBlack: '#000000',   
+  marvelWhite: '#FFFFFF',  
+  accentGold: '#FFD700',    
+  secondaryGrey: '#2C2C2C' 
 };
 
-// Personalización del tema
+
 const customEva = {
   ...eva,
   light: {
@@ -56,7 +56,7 @@ export const App = () => {
     colors: {
       primary: theme['color-primary-500'],
       background: theme['background-basic-color-1'],
-      card: theme['color-primary-500'], // Header con color primario
+      card: theme['color-primary-500'], 
       text: theme['text-basic-color'],
       border: theme['color-basic-500'],
       notification: theme['color-accent-500']

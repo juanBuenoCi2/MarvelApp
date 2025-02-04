@@ -22,7 +22,7 @@ export class ApisauceAdapter implements HttpAdapter {
             get: (target, prop: string) => {
                 if (target[prop]) {
                     console.log("Returning from cache:", prop);
-                    return target[prop].data; // Devuelve solo los datos del caché
+                    return target[prop].data; 
                 }
                 return undefined;
             },
@@ -30,7 +30,7 @@ export class ApisauceAdapter implements HttpAdapter {
                 console.log("Caching result for:", prop);
                 target[prop] = {
                     data: value,
-                    timestamp: Date.now() // Agregamos timestamp para posible expiración
+                    timestamp: Date.now() 
                 };
                 return true;
             }
@@ -38,11 +38,11 @@ export class ApisauceAdapter implements HttpAdapter {
     }
 
     async get<T>(url: string, options?: Record<string, unknown>): Promise<T> {
-        // Crear clave única con parámetros
+        
         const paramsString = options ? new URLSearchParams(options as Record<string, string>).toString() : '';
         const cacheKey = `${url}?${paramsString}`;
 
-        // Verificar caché
+   
         if (this.cacheProxy[cacheKey]) {
             return this.cacheProxy[cacheKey];
         }
@@ -51,7 +51,7 @@ export class ApisauceAdapter implements HttpAdapter {
             const response = await this.api.get<T>(url, options);
             
             if (response.ok && response.data) {
-                // Almacenar en caché con la clave única
+               
                 this.cacheProxy[cacheKey] = response.data;
                 return response.data;
             }

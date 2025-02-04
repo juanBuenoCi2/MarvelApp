@@ -12,9 +12,7 @@ export const AuthProvider = ({children}: {children: React.ReactNode}) => {
   const [user, setUser] = React.useState<{name: string; lastName: string} | null>(null);
 
   const login = async (email: string, password: string) => {
-    // Lógica mockeada
-    console.log(email,password,"hereeee");
-    
+
     if (email === 'IronMan@gmail.com' && password === '123456') {
       const mockUser = {name: 'Tony', lastName: 'Stark'};
       setUser(mockUser);

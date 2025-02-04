@@ -39,7 +39,7 @@ export const HeroesPoster = ({ heroe, height = 420, width = 300, space = 10 }: P
                     style={({ pressed }) => ({
                         width,
                         height,
-                        marginHorizontal: 10,
+                        marginHorizontal: 0,
                         padding: 10,
                         opacity: pressed ? 0.9 : 1,
                     })}
@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        paddingVertical: 12,
-        paddingHorizontal: 8,
+        paddingVertical: 0,
+        paddingHorizontal: 0,
         borderBottomLeftRadius: 18,
         borderBottomRightRadius: 18,
     },

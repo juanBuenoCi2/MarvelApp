@@ -10,13 +10,13 @@ const SpiderSpinner = () => {
     return (
         <View style={styles.container}>
 
-            {/* Spider logo central */}
+  
             <Image
-                source={require('../../../assets/spider-man.png')} // Asegúrate de tener este asset
+                source={require('../../../assets/spider-man.png')} 
 
             />
             <Spinner size='giant' />
-            {/* Texto de carga */}
+           
             <Text category='h6' style={[styles.loadingText, {
                 color: theme['color-primary-500']
             }]}>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontWeight: 'bold',
         letterSpacing: 1.5,
-        fontFamily: 'Bangers-Regular', // Usar fuente Bangers si está disponible
+        fontFamily: 'Bangers-Regular', 
     }
 });
 
